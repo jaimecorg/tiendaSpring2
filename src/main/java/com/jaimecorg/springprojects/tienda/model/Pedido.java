@@ -6,14 +6,10 @@ import java.util.List;
 public class Pedido {
     
     private int codigo;
-
     private Cliente cliente;
-
     private List<DetallePedido> detallePedidos;
-
-    private Date fecha;
-
-    private float total;
+    private java.util.Date fecha;
+    private double total;
     
     public Pedido(int codigo, Cliente cliente, List<DetallePedido> detallePedidos, Date fecha, float total) {
         this.codigo = codigo;
@@ -64,19 +60,19 @@ public class Pedido {
     }
 
     public Date getFecha() {
-        return fecha;
+        return (Date) fecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFecha(java.util.Date date) {
+        this.fecha = date;
     }
 
-    public float getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(float total) {
-        this.total = total;
+    public void setTotal(double d) {
+        this.total = d;
     }
 
     @Override

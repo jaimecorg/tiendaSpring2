@@ -18,6 +18,5 @@ public interface PedidosDAO {
 
     public void delete(int codigo);
 
-    public void updateImg(Pedido pedido);
 }
  
