@@ -2,11 +2,13 @@ package com.jaimecorg.springprojects.tienda.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.jaimecorg.springprojects.tienda.dao.ProductosDAO;
+import com.jaimecorg.springprojects.tienda.model.Pedido;
 import com.jaimecorg.springprojects.tienda.model.Producto;
 import com.jaimecorg.springprojects.tienda.services.ProductosServices;
 
@@ -17,7 +19,7 @@ public class ProductosServicesImpl implements ProductosServices {
     ProductosDAO productosDAO;
 
     @Override
-    public Page<Producto> findAll(Pageable pageable) {
+    public Page<Pedido> findAll(Pageable pageable) {
         return productosDAO.findAll(pageable);
     }
 
@@ -43,5 +45,23 @@ public class ProductosServicesImpl implements ProductosServices {
     @Override
     public void delete(int codigo) {
         productosDAO.delete(codigo);        
+    }
+
+    @Override
+    public Page<Producto> findAll(int codigo) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Producto findProducto(int codigo) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void insert(Producto producto) {
+        // TODO Auto-generated method stub
+        
     }
 }

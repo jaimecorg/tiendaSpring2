@@ -27,6 +27,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Repository;
 
 import com.jaimecorg.springprojects.tienda.dao.ProductosDAO;
+import com.jaimecorg.springprojects.tienda.model.Pedido;
 import com.jaimecorg.springprojects.tienda.model.Producto;
 
 @Repository
@@ -41,7 +42,7 @@ public class ProductosDAOImpl extends JdbcDaoSupport implements ProductosDAO {
 	}
 
     @Override
-    public Page<Producto> findAll(Pageable page) {
+    public PageImpl<Producto> findAll(Pageable page) {
 
     
         String queryCount = "select count(1) from Productos";

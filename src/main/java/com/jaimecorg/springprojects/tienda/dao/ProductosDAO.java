@@ -11,7 +11,7 @@ public interface ProductosDAO {
     // public List<Producto> findAll();
 
     public PageImpl<Pedido> findAll(Pageable page);
-    public Pedido findById(int codigo);
+    public Producto findById(int codigo);
     public void insert(Producto Producto);
     public void update(Producto Producto);
     public void delete(int codigo);
